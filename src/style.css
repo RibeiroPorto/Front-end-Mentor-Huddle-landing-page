@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap');
+
+:root{
+    --main-color: hsl(257, 40%, 49%);
+    --side-color:hsl(300, 69%, 71%);
+
+}
+body{
+    height: 100vh;
+    background: var(--main-color) url('../images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body .logo{
+    margin: 1em 0 0 4em;
+}
+
+body .center-container{
+    margin: 0 3em ;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+.center-container>*{
+    padding: 2em;
+}
+.center-container .product-image{
+  
+    width: 60%;
+    height: auto;
+
+}
+.product-image img{
+    width: 100%;
+}
+
+.center-container .product-description{
+        width: 40%;
+        align-self: flex-start;
+        margin-top: 5em;
+}
+.product-description h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+.product-description p{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    margin-bottom: 1.8em;
+}
+.product-description a{
+    font-family: 'Open Sans', sans-serif;
+    color: var(--main-color);
+    background-color: white;
+    padding:1em 4em;
+    border-radius: 2em;
+    box-shadow: 3px 3px 15px 1px rgba(0,0,0,0.5);
+    transition: ease-in-out 0.2s;
+}
+.product-description a:hover{
+    background-color: var(--side-color);
+    color: white;
+    
+}
+
+
+body .social-networks{
+    
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.social-networks .social-networks-list{
+    display:  flex;
+    align-items:center;
+    justify-content: center;
+    margin-right: 2em;
+}
+.social-networks .social-networks-list li{
+    
+    width: 2.3em;
+    height: 2.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px white solid;
+    border-radius: 2em;
+    margin:1em;
+    transition: ease-in-out 0.2s;
+}
+.social-networks .social-networks-list li:hover{
+    color:var(--side-color);
+    border-color: var(--side-color);
+}
+
+@media (max-width:770px){
+    body{
+        
+    }
+    body .center-container{
+        flex-direction: column;
+        text-align: center;
+
+        
+    }
+    .center-container .product-description{
+        align-self: center;
+        width: 100%;
+        margin:0;
+    }
+    .center-container .product-image{
+       width: 100%;
+        
+    }
+    @media(max-width: 430px){
+        body .logo{
+            margin: .5em 1.5em ; 
+        }
+        body .center-container{
+            margin:.5em;
+            text-align: center;
+        }
+        .center-container .product-description h1{
+            font-size: 1.5em;
+        }
+        body .social-networks{
+            justify-content: center;
+            
+        }
+        body .social-networks .social-networks-list{
+            margin: 0;
+        }
+    }
+    
+}
